@@ -59,7 +59,16 @@
 						<tr>
 							<td><c:out value="${todo.title}" /></td>
 							<td><c:out value="${todo.targetDate}" /></td>
-							<td><c:out value="${todo.status}" /></td>
+							
+							<%--<td><c:out value="${todo.status}" /></td>--%>
+							<td><c:if test="${todo.status}">
+                                     Completed
+                                 </c:if>
+                                 <c:if test="${!todo.status}">
+                                     In Progress
+                                 </c:if>
+                                 </td>
+
 
 							<td><a href="edit?id=<c:out value='${todo.id}' />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a

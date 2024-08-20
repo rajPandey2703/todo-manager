@@ -20,7 +20,7 @@ import todoapp.model.Todo;
  * ControllerServlet.java This servlet acts as a page controller for the
  * application, handling all requests from the todo.
  * 
- * @email Ramesh Fadatare
+ *
  */
 
 @WebServlet("/")

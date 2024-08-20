@@ -53,8 +53,8 @@ public class LoginController extends HttpServlet {
 				dispatcher.forward(request, response);
 			} else {
 				HttpSession session = request.getSession();
-				// session.setAttribute("user", username);
-				// response.sendRedirect("login.jsp");
+				session.setAttribute("user", username);
+				response.sendRedirect("login/login.jsp");
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
