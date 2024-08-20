@@ -11,7 +11,7 @@
 	crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"
 	type="text/javascript"></script>
-<script src="login.js" type="text/javascript"></script>
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
