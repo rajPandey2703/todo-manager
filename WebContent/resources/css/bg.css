@@ -14,6 +14,12 @@ form.wpforms-form {
     border-style: double;
 }
 
+body {
+ background-image: url(../images/bg-3.jpg);
+  background-size:cover;
+    position:relative;
+    border-radius: 8px;
+}
 
    
   
