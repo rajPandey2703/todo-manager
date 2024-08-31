@@ -12,7 +12,7 @@
 <footer class="footer font-small black">
     <!-- Copyright -->
   <div class="footer-copyright text-center py-3 bg-dark">
-       <p style="color:white">Copyright @2024</p>
+       <i style="color:white">Copyright @2024</i>
       
       </div>
 </footer>

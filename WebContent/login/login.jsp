@@ -14,18 +14,17 @@
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/bg.css">
 
-
 </head>
 <body>
 
 	<jsp:include page="../common/newHeader.jsp"></jsp:include>
 
 	<section class="ftco-section">
-		<div class="container login-page">
+		<div class="container">
 
 			<div class="row justify-content-center ">
 				<div class="col-md-6">
-					<div class="login-wrap p-4 p-md-5" style="border-style: outset; margin-top: 50px">
+					<div class="login-wrap p-4 p-md-5" style="margin-top: 50px">
 						<div class="d-flex"></div>
 						<form action="<%=request.getContextPath()%>/login" method="post" 
 						>
