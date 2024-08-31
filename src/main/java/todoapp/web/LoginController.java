@@ -1,6 +1,7 @@
 package todoapp.web;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -41,6 +42,7 @@ public class LoginController extends HttpServlet {
 
 	private void authenticate(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
+		PrintWriter out = response.getWriter();
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		LoginBean loginBean = new LoginBean();
@@ -53,8 +55,9 @@ public class LoginController extends HttpServlet {
 				dispatcher.forward(request, response);
 			} else {
 				HttpSession session = request.getSession();
-				// session.setAttribute("user", username);
-				// response.sendRedirect("login.jsp");
+				session.setAttribute("username", username);
+				response.sendRedirect("login/login.jsp");
+
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

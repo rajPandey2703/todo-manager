@@ -1,0 +1,19 @@
+.bg-img {
+    height:70vh;
+    background: url(../images/bg-1.jpg);
+    background-size:cover;
+    position:relative;
+    border-radius: 8px;;
+}
+
+form.wpforms-form {
+    padding: 20px;
+    border-radius: 3px;
+    border-width: 2px;
+    border-color: #b95d52;
+    border-style: double;
+}
+
+
+   
+  

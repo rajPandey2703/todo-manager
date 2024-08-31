@@ -3,12 +3,14 @@ package todoapp.web;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import todoapp.dao.SendEmailDao;
 import todoapp.dao.UserDao;
 import todoapp.model.User;
 
@@ -16,10 +18,16 @@ import todoapp.model.User;
 public class UserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UserDao userDao;
+	private SendEmailDao emaildao;
+	private String host;
+	private String port;
+	private String user;
+	private String pass;
 
 	@Override
 	public void init() {
 		userDao = new UserDao();
+		emaildao = new SendEmailDao();
 	}
 
 	@Override
@@ -40,6 +48,10 @@ public class UserController extends HttpServlet {
 		String lastName = request.getParameter("lastName");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		String userEmail = request.getParameter("email");
+		String subject = "To Do Regsitration";
+		String content = "Hi <br>Here are your login details <br> username: " + username + "<br>" + "password:"
+				+ password;
 
 		User employee = new User();
 		employee.setFirstName(firstName);
@@ -51,6 +63,15 @@ public class UserController extends HttpServlet {
 			int result = userDao.registerEmployee(employee);
 			if (result == 1) {
 				request.setAttribute("NOTIFICATION", "User Registered Successfully!");
+
+				ServletContext context = getServletContext();
+				host = context.getInitParameter("host");
+				port = context.getInitParameter("port");
+				user = context.getInitParameter("user");
+				pass = context.getInitParameter("pass");
+
+				emaildao.sendEmail(host, port, user, pass, userEmail, subject, content);
+
 			}
 
 		} catch (Exception e) {

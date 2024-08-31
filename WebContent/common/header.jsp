@@ -1,8 +1,23 @@
-<header>
-	<nav class="navbar navbar-expand-md navbar-dark"
-		style="background-color: tomato">
+<style>
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+</style>
+
+
+<header class = "">
+	<nav class="App-header">
 		<div>
-			<a href="https://www.javaguides.net" class="navbar-brand"> Todo App</a>
+			<a href="" class="navbar-brand"> Todo App</a>
 		</div>
 
 		<ul class="navbar-nav navbar-collapse justify-content-end">
