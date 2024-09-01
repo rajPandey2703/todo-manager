@@ -26,8 +26,7 @@
 						href="<%= request.getContextPath() %>/login" class="nav-link">Login</a>
 					</li>
 					<li class="nav-item">
-					<li><a href="<%= request.getContextPath() %>/register"
-						class="nav-link">Signup</a></li>
+					
 
 
 

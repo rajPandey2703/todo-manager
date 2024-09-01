@@ -24,6 +24,7 @@
 				<li><a href="<%=request.getContextPath()%>/list"
 					class="nav-link">Todos</a></li>
 			</ul>
+			
 			<c:if test="${isAdmin==true}">
 			<ul class="navbar-nav">
 				<li><a href="<%=request.getContextPath()%>/admin"
@@ -31,7 +32,6 @@
 			</ul>
 			
 			</c:if>
-			
 
 			<ul class="navbar-nav navbar-collapse justify-content-end">
 				<li><a href="<%=request.getContextPath()%>/logout"
@@ -44,41 +44,47 @@
 		<!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
 
 		<div class="container">
-			<h3 class="text-center">List of Todos</h3>
+			<h3 class="text-center">List of Users</h3>
 			<hr>
 			<div class="container text-left">
 
-				<a href="<%=request.getContextPath()%>/new"
-					class="btn btn-success">Add Todo</a>
+				
 			</div>
 			<br>
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th>Title</th>
-						<th>Target Date</th>
-						<th>Todo Status</th>
+						<th>Name</th>
+						<th>Username</th>
+						<th>Email</th>
+						<th>IsAdmin</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
 				<tbody>
-					<!--   for (Todo todo: todos) {  -->
-					<c:forEach var="todo" items="${listTodo}">
+					<c:forEach var="user" items="${userList}">
 
 						<tr>
-							<td><c:out value="${todo.title}" /></td>
-							<td><c:out value="${todo.targetDate}" /></td>
-							<td><c:out value="${todo.status}" /></td>
+							<td><c:out value="${user.firstName}  ${user.lastName}" /></td>
+							<td><c:out value="${user.username}" /></td>
+							<td><c:out value="${user.email}" /></td>
+							
+							
+							<td><c:if test="${user.isAdmin==true}">
+							Yes
+							</c:if>
+							<c:if test="${user.isAdmin==false}">
+							No
+							</c:if>
+							</td>
 
-							<td><a href="edit?id=<c:out value='${todo.id}' />">Edit</a>
+							<td><a href="">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?id=<c:out value='${todo.id}' />">Delete</a></td>
-
-							<!--  <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Update</button>
-          							<button (click)="deleteTodo(todo.id)" class="btn btn-warning">Delete</button></td> -->
+								href="">Delete</a></td>
+							
 						</tr>
 					</c:forEach>
-					<!-- } -->
+					
 				</tbody>
 
 			</table>

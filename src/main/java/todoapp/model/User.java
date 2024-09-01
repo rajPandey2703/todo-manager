@@ -13,6 +13,37 @@ public class User implements Serializable {
 	private String lastName;
 	private String username;
 	private String password;
+	private String email;
+	private boolean isAdmin;
+
+	public User() {
+
+	}
+
+	public User(String firstName, String lastName, String username, String email, boolean isAdmin) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.username = username;
+		this.email = email;
+		this.isAdmin = isAdmin;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public boolean getIsAdmin() {
+		return isAdmin;
+	}
+
+	public void setIsAdmin(boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
 
 	public String getFirstName() {
 		return firstName;
