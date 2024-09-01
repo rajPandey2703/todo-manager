@@ -15,11 +15,13 @@ form.wpforms-form {
 }
 
 body {
- background-image: url(../images/bg-3.jpg);
+background-image: url(../images/bg-4.jpg);
   background-size:cover;
     position:relative;
     border-radius: 8px;
 }
 
-   
-  
+.navbarScroll.navbarDark {
+    background-color: black;
+}
+

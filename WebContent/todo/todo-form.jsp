@@ -10,7 +10,8 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 
-</head>
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/bg.css">
 
 </head>
 <body>
@@ -82,9 +83,9 @@
 						value="<c:out value='${todo.targetDate}' />" class="form-control"
 						name="targetDate" required="required">
 				</fieldset>
-
+                 
 				<button type="submit" class="btn btn-success">Save</button>
-				</form>
+				<button type="button" class="btn btn-warning" name="back" onclick="history.back()">back</button>
 			</div>
 		</div>
 	</div>
