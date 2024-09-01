@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>ToDo</title>
+<title>To Do</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -71,7 +71,8 @@
 			</div>
 		</div>
 	</section>
-	<jsp:include page="../common/footer.jsp"></jsp:include>
+	
+	<%--<jsp:include page="../common/footer.jsp"></jsp:include> --%>
 
 </body>
 </html>
