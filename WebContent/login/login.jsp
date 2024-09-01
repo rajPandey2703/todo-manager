@@ -22,8 +22,8 @@
 	<section class="ftco-section">
 		<div class="container">
 
-			<div class="row justify-content-center ">
-				<div class="col-md-6">
+			<div class="row ">
+				<div class="col-md-5">
 					<div class="login-wrap p-4 p-md-5" style="margin-top: 50px">
 						<div class="d-flex"></div>
 						<form action="<%=request.getContextPath()%>/login" method="post" 
@@ -55,16 +55,15 @@
 								</div>
 							</div>
 						</form>
-						<p class="text-center">
-							Not a member? <a href="<%= request.getContextPath() %>/register">Sign Up</a>
-						</p>
+						
 					</div>
 				</div>
+                <div class="col-md-1" style ="border-right: 2px solid grey;margin-top: 50px"></div>
 
 				<div class="col-md-6">
 					<div class="login-wrap p-4 p-md-5">
+						<jsp:include page="../register/signup.jsp"></jsp:include>
 						
-						<div class="bg-img"></div>
 					</div>
 
 				</div>

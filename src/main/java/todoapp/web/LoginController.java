@@ -50,9 +50,18 @@ public class LoginController extends HttpServlet {
 		loginBean.setPassword(password);
 
 		try {
-			if (loginDao.validate(loginBean)) {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("todo/todo-list.jsp");
-				dispatcher.forward(request, response);
+			var authenticate = loginDao.validate(loginBean);
+			if (authenticate != null) {
+				if (authenticate.getIsAdmin()) {
+					request.setAttribute("isAdmin", authenticate.getIsAdmin());
+					RequestDispatcher dispatcher = request.getRequestDispatcher("admin/users.jsp");
+					dispatcher.forward(request, response);
+				} else {
+					RequestDispatcher dispatcher = request.getRequestDispatcher("todo/todo-list.jsp");
+					dispatcher.forward(request, response);
+
+				}
+
 			} else {
 				HttpSession session = request.getSession();
 				session.setAttribute("username", username);

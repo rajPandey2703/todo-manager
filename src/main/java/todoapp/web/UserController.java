@@ -58,11 +58,11 @@ public class UserController extends HttpServlet {
 		employee.setLastName(lastName);
 		employee.setUsername(username);
 		employee.setPassword(password);
+		employee.setEmail(userEmail);
 
 		try {
 			int result = userDao.registerEmployee(employee);
 			if (result == 1) {
-				request.setAttribute("NOTIFICATION", "User Registered Successfully!");
 
 				ServletContext context = getServletContext();
 				host = context.getInitParameter("host");
@@ -70,7 +70,13 @@ public class UserController extends HttpServlet {
 				user = context.getInitParameter("user");
 				pass = context.getInitParameter("pass");
 
-				emaildao.sendEmail(host, port, user, pass, userEmail, subject, content);
+				var isSent = emaildao.sendEmail(host, port, user, pass, userEmail, subject, content);
+				if (isSent) {
+					request.setAttribute("NOTIFICATION", "Registration is Successful. Please check the email");
+				} else {
+					request.setAttribute("NOTIFICATION",
+							"Registration is Successful but email is not sent as email doesnt exists");
+				}
 
 			}
 
@@ -79,7 +85,7 @@ public class UserController extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("register/register.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("login/login.jsp");
 		dispatcher.forward(request, response);
 	}
 }

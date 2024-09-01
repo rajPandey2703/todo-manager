@@ -10,9 +10,9 @@ import todoapp.utils.JDBCUtils;
 
 public class LoginDao {
 
-	public boolean validate(LoginBean loginBean) throws ClassNotFoundException {
+	public LoginBean validate(LoginBean loginBean) throws ClassNotFoundException {
 		boolean status = false;
-
+		LoginBean login = new LoginBean();
 		Class.forName("com.mysql.jdbc.Driver");
 
 		try (Connection connection = JDBCUtils.getConnection();
@@ -21,15 +21,15 @@ public class LoginDao {
 						.prepareStatement("select * from users where username = ? and password = ? ")) {
 			preparedStatement.setString(1, loginBean.getUsername());
 			preparedStatement.setString(2, loginBean.getPassword());
-
-			System.out.println(preparedStatement);
+			preparedStatement.setMaxRows(1);
 			ResultSet rs = preparedStatement.executeQuery();
 			status = rs.next();
+			login.setIsAdmin(rs.getBoolean("isAdmin"));
 
 		} catch (SQLException e) {
 			// process sql exception
 			JDBCUtils.printSQLException(e);
 		}
-		return status;
+		return login;
 	}
 }
