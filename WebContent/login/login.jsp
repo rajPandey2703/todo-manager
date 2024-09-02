@@ -58,7 +58,7 @@
 						
 					</div>
 				</div>
-                <div class="col-md-1" style ="border-right: 2px solid grey;margin-top: 50px"></div>
+                <div class="col-md-1"></div>
 
 				<div class="col-md-6">
 					<div class="login-wrap p-4 p-md-5">
