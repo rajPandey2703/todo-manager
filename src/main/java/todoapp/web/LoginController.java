@@ -50,7 +50,7 @@ public class LoginController extends HttpServlet {
 		loginBean.setPassword(password);
 
 		try {
-			var authenticate = loginDao.validate(loginBean);
+			LoginBean authenticate = loginDao.validate(loginBean);
 			if (authenticate != null) {
 				if (authenticate.getIsAdmin()) {
 					request.setAttribute("isAdmin", authenticate.getIsAdmin());

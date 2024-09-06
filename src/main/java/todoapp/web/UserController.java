@@ -70,7 +70,7 @@ public class UserController extends HttpServlet {
 				user = context.getInitParameter("user");
 				pass = context.getInitParameter("pass");
 
-				var isSent = emaildao.sendEmail(host, port, user, pass, userEmail, subject, content);
+				Boolean isSent = emaildao.sendEmail(host, port, user, pass, userEmail, subject, content);
 				if (isSent) {
 					request.setAttribute("NOTIFICATION", "Registration is Successful. Please check the email");
 				} else {
