@@ -5,22 +5,20 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>To Do</title>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-1.10.2.js"
 	type="text/javascript"></script>
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/bg.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 <body>
 
 	<jsp:include page="../common/newHeader.jsp"></jsp:include>
 
-	<section class="ftco-section">
-		<div class="container">
+		<div class="container bg-img">
 
 			<div class="row ">
 				<div class="col-md-5">
@@ -38,9 +36,9 @@
 									class="form-control" id="password" placeholder="Password"
 									name="password" required>
 							</div>
-							<div class="form-group">
+							<div class="form-group center">
 								<button type="submit"
-									class="form-control btn btn-primary rounded submit px-3">Sign
+									class="btn btn-primary rounded submit px-3 test">Sign
 									In</button>
 							</div>
 							<div class="form-group d-md-flex">
@@ -69,7 +67,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	
 	
 	<%--<jsp:include page="../common/footer.jsp"></jsp:include> --%>
 

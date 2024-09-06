@@ -14,8 +14,8 @@
 
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
+	<header id="grad">
+		<nav class="navbar navbar-expand-lg navbar-dark">
 			<div>
 				<a href="" class="navbar-brand"> Todo Manager</a>
 			</div>
@@ -35,7 +35,7 @@
 
 			<ul class="navbar-nav navbar-collapse justify-content-end">
 				<li><a href="<%=request.getContextPath()%>/logout"
-					class="nav-link">Logout</a></li>
+					class="nav-link"><img src="<%=request.getContextPath()%>/resources/images/logout.png" width="30" height="25"></a></li>
 			</ul>
 		</nav>
 	</header>

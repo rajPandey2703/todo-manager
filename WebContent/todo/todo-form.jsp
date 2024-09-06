@@ -15,8 +15,8 @@
 
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<header id="grad">
+		<nav class="navbar navbar-expand-lg navbar-dark">
 			<div>
 				
 			</div>
@@ -28,7 +28,8 @@
 
 			<ul class="navbar-nav navbar-collapse justify-content-end">
 				<li><a href="<%=request.getContextPath()%>/logout"
-					class="nav-link">Logout</a></li>
+					class="nav-link">
+					<img src="<%=request.getContextPath()%>/resources/images/logout.png" width="30" height="25"></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -83,9 +84,16 @@
 						value="<c:out value='${todo.targetDate}' />" class="form-control"
 						name="targetDate" required="required">
 				</fieldset>
-                 
-				<button type="submit" class="btn btn-success">Save</button>
+				
+				<fieldset class="form-group">
+				 <div class="center">
+                 <button type="submit" class="btn btn-success mr-5">Save</button>
 				<button type="button" class="btn btn-warning" name="back" onclick="history.back()">back</button>
+                 </div>
+				
+				
+				</fieldset>
+                
 			</div>
 		</div>
 	</div>

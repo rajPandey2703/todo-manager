@@ -1,9 +1,8 @@
 .bg-img {
-    height:70vh;
-    background: url(../images/bg-1.jpg);
-    background-size:cover;
+   background-image: url(../images/6.jpg);
+  background-size:cover;
     position:relative;
-    border-radius: 8px;;
+    border-radius: 8px;
 }
 
 form.wpforms-form {
@@ -13,15 +12,17 @@ form.wpforms-form {
     border-color: #b95d52;
     border-style: double;
 }
-
-body {
-background-image: url(../images/bg-4.jpg);
-  background-size:cover;
-    position:relative;
-    border-radius: 8px;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .navbarScroll.navbarDark {
     background-color: black;
 }
-
+#grad {
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
