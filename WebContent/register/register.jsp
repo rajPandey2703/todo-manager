@@ -26,19 +26,19 @@
 
 					<div class="form-group">
 						<input type="text"
-							class="form-control" id="uname" placeholder="First Name"
+							class="form-control" id="fname" placeholder="First Name"
 							name="firstName" required>
 					</div>
 
 					<div class="form-group">
 						<input type="text"
-							class="form-control" id="uname" placeholder="last Name"
+							class="form-control" id="lname" placeholder="last Name"
 							name="lastName" required>
 					</div>
 
 					<div class="form-group">
 						 <input type="text"
-							class="form-control" id="username" placeholder="User Name"
+							class="form-control" id="username1" placeholder="User Name"
 							name="username" required>
 					</div>
 					<div class="form-group">
@@ -49,7 +49,7 @@
 
 					<div class="form-group">
 						 <input type="password"
-							class="form-control" id="password" placeholder="Password"
+							class="form-control" id="password1" placeholder="Password"
 							name="password" required>
 					</div>
 

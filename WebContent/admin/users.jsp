@@ -9,13 +9,13 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
-<link rel="stylesheet"
+	<link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/bg.css">
 
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
+	<header id="grad">
+		<nav class="navbar navbar-expand-lg navbar-dark">
 			<div>
 				<a href="" class="navbar-brand"> Todo Manager</a>
 			</div>
@@ -35,7 +35,11 @@
 
 			<ul class="navbar-nav navbar-collapse justify-content-end">
 				<li><a href="<%=request.getContextPath()%>/logout"
-					class="nav-link">Logout</a></li>
+					class="nav-link">
+					<img src="<%=request.getContextPath()%>/resources/images/logout.png" width="30" height="25"></a>
+					</li>
+					
+				
 			</ul>
 		</nav>
 	</header>
@@ -51,8 +55,8 @@
 				
 			</div>
 			<br>
-			<table class="table table-bordered">
-				<thead>
+			<table class="table table-striped table-sm">
+				<thead class="thead-dark">
 					<tr>
 						<th>Name</th>
 						<th>Username</th>

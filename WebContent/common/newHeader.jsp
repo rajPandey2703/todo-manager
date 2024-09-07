@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/bg.css">
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between" id="grad">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">ToDo Manager</a>
 			<button class="navbar-toggler" type="button"
@@ -35,7 +37,10 @@
 					<input class="form-control mr-sm-2" type="search"
 						placeholder="Search" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					
+					
 				</form>
+				
 			</div>
 		</div>
 	</nav>
