@@ -41,11 +41,13 @@
 		<div class="form-group">
 			<input type="password" class="form-control" id="password1"
 				placeholder="Password" name="password" required>
+				
+				<input type="checkbox" onclick="myFunction()">Show Password
 		</div>
 		
 		<div class="form-group center">
 			<button type="submit"
-				class="btn btn-success rounded submit px-3">Sign
+				class="button">Sign
 				Up</button>
 				<div class="alert center" role="alert">
 				<p style="color: green;">${NOTIFICATION}</p>
